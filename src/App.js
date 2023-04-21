@@ -17,13 +17,20 @@ function App() {
   }
   const createPost = async (newImage) => {
     try {
-      const res= await axios.post(url, newImage);
       
-    } catch (err) {
-      console.log(err)
-
+      const headers = {
+        'Content-Type': 'application/json' // add the Content-Type header
+      };
+      const data = JSON.stringify(newImage); // convert newImage to a JSON string
+  
+      const response = await axios.post(url, data, { headers });
+      console.log(response.data); // log the response data
+    } catch (error) {
+      console.error(error);
     }
-  }
+  };
+  
+  
   
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
