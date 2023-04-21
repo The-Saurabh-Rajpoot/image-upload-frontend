@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+#imge{
+  display: none;
+}
+
+.div-container{
+  border: 5px solid black;
+  margin: auto;
+  width: 50vw;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+}
+.form-container{
+  padding: 20px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#image-label{
+  display: block;
+  width: 50px;
+}
+
+#img{
+  display: block;
+width: 150px;
+}
